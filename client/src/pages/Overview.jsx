@@ -25,8 +25,8 @@ function Overview() {
       // 🔥 Role based endpoint
       const endpoint =
         userRole === "admin"
-          ? "http://localhost:5000/api/booking/admin/bookings"
-          : "http://localhost:5000/api/booking";
+          ? "https://capturepro-backend.onrender.com/api/booking/admin/bookings"
+          : "https://capturepro-backend.onrender.com/api/booking";
 
       const res = await axios.get(
         endpoint,

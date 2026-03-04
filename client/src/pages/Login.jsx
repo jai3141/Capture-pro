@@ -33,7 +33,7 @@ function Login({ setIsLoggedIn }) {
             if (isSignup) {
                 // 🔹 Signup
                 await axios.post(
-                    "http://localhost:5000/api/auth/signup",
+                    "https://capturepro-backend.onrender.com/api/auth/signup",
                     formData
                 );
 
@@ -43,7 +43,7 @@ function Login({ setIsLoggedIn }) {
             } else {
                 // 🔹 Login
                 const res = await axios.post(
-                    "http://localhost:5000/api/auth/login",
+                    "https://capturepro-backend.onrender.com/api/auth/login",
                     {
                         email: formData.email,
                         password: formData.password
@@ -71,7 +71,7 @@ function Login({ setIsLoggedIn }) {
             const idToken = await result.user.getIdToken();
 
             const response = await axios.post(
-                "http://localhost:5000/api/auth/google-login",
+                "https://capturepro-backend.onrender.com/api/auth/google-login",
                 { token: idToken }
             );
 

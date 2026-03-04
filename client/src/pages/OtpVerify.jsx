@@ -10,7 +10,7 @@ function OtpVerify({ email, onBackToLogin }) {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/auth/verify-otp",
+        "https://capturepro-backend.onrender.com/api/auth/verify-otp",
         { email, otp }
       );
 

@@ -24,7 +24,7 @@ function Bookings() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/booking",
+        "https://capturepro-backend.onrender.com/api/booking",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -51,7 +51,7 @@ function Bookings() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/booking",
+        "https://capturepro-backend.onrender.com/api/booking",
         formData,
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -87,7 +87,7 @@ function Bookings() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/booking/${id}`,
+        `https://capturepro-backend.onrender.com/api/booking/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }

@@ -34,7 +34,7 @@ function BookingCalendar() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/booking/admin/bookings",
+        "https://capturepro-backend.onrender.com/api/booking/admin/bookings",
         {
           headers: { Authorization: `Bearer ${token}` }
         }

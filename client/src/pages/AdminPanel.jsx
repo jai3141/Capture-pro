@@ -17,7 +17,7 @@ function AdminPanel() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/booking/admin/bookings",
+        "https://capturepro-backend.onrender.com/api/booking/admin/bookings",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -44,7 +44,7 @@ function AdminPanel() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/booking/${id}`,
+        `https://capturepro-backend.onrender.com/api/booking/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -67,7 +67,7 @@ function AdminPanel() {
     try {
 
       await axios.put(
-        `http://localhost:5000/api/booking/${id}/status`,
+        `https://capturepro-backend.onrender.com/api/booking/${id}/status`,
         { status },
         {
           headers: { Authorization: `Bearer ${token}` }

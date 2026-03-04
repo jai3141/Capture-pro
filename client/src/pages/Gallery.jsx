@@ -37,8 +37,8 @@ function Gallery() {
 
       const endpoint =
         userRole === "admin"
-          ? "http://localhost:5000/api/booking/admin/bookings"
-          : "http://localhost:5000/api/booking";
+          ? "https://capturepro-backend.onrender.com/api/booking/admin/bookings"
+          : "https://capturepro-backend.onrender.com/api/booking";
 
       const res = await axios.get(
         endpoint,
@@ -63,7 +63,7 @@ function Gallery() {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/api/gallery/${bookingId}`,
+        `https://capturepro-backend.onrender.com/api/gallery/${bookingId}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -102,7 +102,7 @@ function Gallery() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/gallery",
+        "https://capturepro-backend.onrender.com/api/gallery",
         formData,
         {
           headers: {
@@ -136,7 +136,7 @@ function Gallery() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/gallery/${selectedBooking}`,
+        `https://capturepro-backend.onrender.com/api/gallery/${selectedBooking}`,
         {
           params: { publicId },
           headers: { Authorization: `Bearer ${token}` }
